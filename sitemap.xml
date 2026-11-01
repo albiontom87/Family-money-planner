@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://albiontom87.github.io/Family-money-planner/</loc>
-  </url>
-  <url>
-    <loc>https://albiontom87.github.io/Family-money-planner/family-budget-guide.html</loc>
-  </url>
-  <url>
-    <loc>https://albiontom87.github.io/Family-money-planner/weekly-food-budget-guide.html</loc>
-  </url>
-  <url>
-    <loc>https://albiontom87.github.io/Family-money-planner/low-income-budget-guide.html</loc>
-  </url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/family-budget-guide.html</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/weekly-food-budget-guide.html</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/low-income-budget-guide.html</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/family-income-budget-guide.html</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/household-budget-categories.html</loc></url>
+  <url><loc>https://albiontom87.github.io/Family-money-planner/make-money-last-until-payday.html</loc></url>
 </urlset>
