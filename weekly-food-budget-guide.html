@@ -29,16 +29,20 @@
 <h2>7. Review the budget after a few weeks</h2><p>At the end of each week, compare your planned amount with what you actually spent. If you consistently overspend, work out why before cutting the budget again. The target may be unrealistic, or your plan may not account for packed lunches, household products or extra guests. Make one change at a time, then see whether it helps.</p>
 <h2>Frequently asked questions</h2><h3>What is a reasonable weekly food budget for a family of four in the UK?</h3><p>It depends on your household's needs, where you shop, dietary requirements and whether toiletries or cleaning products are included. Track your current spending first, then set a realistic target for your circumstances.</p><h3>Should toiletries and cleaning products be included?</h3><p>You can include them in one supermarket budget, but track them separately if possible. This makes it easier to understand your true food costs and adjust each part.</p><h3>Is a daily food budget useful if I shop weekly?</h3><p>Yes, as a rough guide. It helps you understand the weekly amount, but you do not need to spend evenly each day.</p><h3>What if I keep going over budget?</h3><p>Review a few weeks of spending and identify the main cause. Adjust the target to a realistic level, plan meals around what you have and reduce avoidable waste before making another cut.</p>
 <div class="callout"><strong>Ready to plan your household money?</strong><p>Use the free calculators on Family Money Planner to organise your monthly budget, food spending and savings goals.</p><a class="button" href="https://albiontom87.github.io/Family-money-planner/">Visit Family Money Planner →</a></div><p class="small">This article provides general educational information, not individual financial advice. Example figures are illustrative and should be adapted to your household.</p></main><footer><p><a href="https://albiontom87.github.io/Family-money-planner/">Home</a> · <a href="https://albiontom87.github.io/Family-money-planner/family-budget-guide.html">How to Create a Family Budget in the UK</a></p><p>© Family Money Planner</p></footer></div>
+
 <script>
 (function(){
-  const toggle=document.querySelector('.menu-toggle');
-  const menu=document.getElementById('site-navigation');
-  if(!toggle||!menu)return;
-  function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
-  toggle.addEventListener('click',function(){const opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});
-  menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});
-  document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});
-  document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});
+  function initMenu(){
+    var toggle=document.querySelector('.menu-toggle');
+    var menu=document.getElementById('site-navigation');
+    if(!toggle||!menu||toggle.dataset.menuReady==='true')return;
+    toggle.dataset.menuReady='true';
+    function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+    toggle.addEventListener('click',function(){var opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});
+    menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});
+    document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});
+    document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initMenu);else initMenu();
 })();
-</script>
-<script>(function(){const toggle=document.querySelector('.menu-toggle');const menu=document.getElementById('site-navigation');if(!toggle||!menu)return;function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}toggle.addEventListener('click',function(){const opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});})();</script></body></html>
+</script></body></html>
