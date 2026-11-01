@@ -79,17 +79,6 @@ main{max-width:850px;margin:auto;padding:34px 20px 60px}h1{font-size:clamp(2.1re
 <div class="footer"><a href="/Family-money-planner/">Family Money Planner home</a> · Practical UK household budgeting tools and guides.</div>
 </main>
 
-<script>
-(function(){
-  const toggle=document.querySelector('.menu-toggle');
-  const menu=document.getElementById('site-navigation');
-  if(!toggle||!menu)return;
-  function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
-  toggle.addEventListener('click',function(){const opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});
-  menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});
-  document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});
-  document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});
-})();
-</script>
-<script>(function(){const toggle=document.querySelector('.menu-toggle');const menu=document.getElementById('site-navigation');if(!toggle||!menu)return;function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}toggle.addEventListener('click',function(){const opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});})();</script></body>
+
+<script>(function(){function initMenu(){var toggle=document.querySelector('.menu-toggle');var menu=document.getElementById('site-navigation');if(!toggle||!menu||toggle.dataset.menuReady==='true')return;toggle.dataset.menuReady='true';function closeMenu(){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}toggle.addEventListener('click',function(){var opening=menu.hidden;menu.hidden=!opening;toggle.setAttribute('aria-expanded',String(opening));toggle.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});menu.addEventListener('click',function(event){if(event.target.closest('a'))closeMenu();});document.addEventListener('keydown',function(event){if(event.key==='Escape')closeMenu();});document.addEventListener('click',function(event){if(!menu.hidden&&!menu.contains(event.target)&&!toggle.contains(event.target))closeMenu();});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initMenu);else initMenu();})();</script></body>
 </html>
